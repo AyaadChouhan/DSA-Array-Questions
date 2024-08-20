@@ -9,13 +9,21 @@
 // oddProduct([1, 2, 1, 2, 1, 2, 1, 2]) ➞ 1
 
 function oddProduct(arr) {
-    let n = 1
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 !== 0) {
-            n *= arr[i]
+    // let n = 1
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 !== 0) {
+    //         n *= arr[i]
+    //     }
+    // }
+    // return n
+
+     return arr.reduce((acc, curr)=>{
+        if (curr % 2 !== 0) {
+            acc *= curr
         }
-    }
-    return n
+        return acc
+    }, 1)
+    
 }
 console.log(oddProduct([1, 2, 1, 2, 1, 2, 1, 2]));
 console.log(oddProduct([5, 5, 8, 2, 4, 32]));
