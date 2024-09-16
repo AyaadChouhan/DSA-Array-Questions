@@ -15,13 +15,26 @@ function findLargestNums(arr) {
   //   newArr.push(val)
   // }
   // return newArr
-
+  //===========================================================
+  //   let result = [];
+  //   for (const element of arr) {
+  //     let newArr = element.sort((a, b) => {
+  //       return b - a;
+  //     });
+  //     result.push(newArr[0]);
+  //   }
+  //   return result;
+  //===========================================================
   let result = [];
-  for (const element of arr) {
-    let newArr = element.sort((a, b) => {
-      return b - a;
-    });
-    result.push(newArr[0]);
+  for (let i = 0; i < arr.length; i++) {
+    let tempeorary = arr[i][0];
+    for (let j = 0; j < arr[i].length; j++) {
+      if (tempeorary < arr[i][j]) {
+        tempeorary = arr[i][j];
+        // console.log(tempeorary)
+      }
+    }
+    result.push(tempeorary);
   }
   return result;
 }
@@ -30,5 +43,12 @@ console.log(
     [4, 2, 7, 1],
     [20, 70, 40, 90],
     [1, 2, 0],
+  ])
+);
+console.log(
+  findLargestNums([
+    [-34, -54, -74],
+    [-32, -2, -65],
+    [-54, 7, -43],
   ])
 );
