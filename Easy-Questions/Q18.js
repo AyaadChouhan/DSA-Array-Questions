@@ -9,10 +9,21 @@
 // formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]) ➞ "(345) 501-2527"
 
 function formatPhoneNumber(arr) {
-    // return `(${arr[0]}${arr[1]}${arr[2]}) ${`${arr[3]}${arr[4]}${arr[5]}`}-${`${arr[6]}${arr[7]}${arr[8]}${arr[9]}`}`
-    let temp = '';
-    for (let i = 0; i < arr.length; i++) {
-        
+  let first = "",
+    sec = "",
+    third = "";
+  // return `(${arr[0]}${arr[1]}${arr[2]}) ${`${arr[3]}${arr[4]}${arr[5]}`}-${`${arr[6]}${arr[7]}${arr[8]}${arr[9]}`}`
+  for (let i = 0; i < arr.length; i++) {
+    if (i <= 2) {
+      first += arr[i];
+    } else if (i > 2 && i <= 5) {
+      sec += arr[i];
+    } else if (i > 5) {
+      third += arr[i];
     }
+  }
+
+  let temp = `(${first}) ${sec}-${third}`;
+  return temp;
 }
-console.log(formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]))
+console.log(formatPhoneNumber([3, 4, 5, 5, 0, 1, 2, 5, 2, 7]));
