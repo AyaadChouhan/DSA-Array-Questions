@@ -15,15 +15,15 @@ function compact(arr) {
     // }
     // return newArr
 
-    // return arr.reduce((acc, curr)=>{
-    //     if(Boolean(curr) === true){
-    //         acc.push(curr);
-    //     }   
-    //     return acc
-    // }, [])
+    return arr.reduce((acc, curr)=>{
+        if(Boolean(curr) === true){
+            acc.push(curr);
+        }   
+        return acc
+    }, [])
 
-    return arr.filter(val =>{
-        return Boolean(val) === true;
-    })
+    // return arr.filter(val =>{
+    //     return Boolean(val) === true;
+    // })
 }
 console.log(compact([0, 1, false, 2, "", 3]));
