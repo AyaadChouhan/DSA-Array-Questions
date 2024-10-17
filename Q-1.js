@@ -28,4 +28,4 @@ function countTrue(arr) {
 }
 console.log(countTrue([false, false, false, false]));
 console.log(countTrue([true, false, true, false]));
-console.log(007)
+console.log(008)
