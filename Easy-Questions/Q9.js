@@ -42,4 +42,4 @@ function getOnlyEvens(arr) {
     }
   });
 }
-console.log(getOnlyEvens([1, 3, 2, 6, 4, 8]));
+console.log(getOnlyEvens([1, 3, 2, 6, 4, 8, 10]));
