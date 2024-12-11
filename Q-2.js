@@ -26,4 +26,4 @@ function compact(arr) {
     //     return Boolean(val) === true;
     // })
 }
-console.log(compact([0, 1, false, 2, "", 3]));
+console.log(compact([0, 1, false, 2, "", 3]));console.log(compact([0, 1, false, 2, "", 3]));
