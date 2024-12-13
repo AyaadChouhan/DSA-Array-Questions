@@ -37,4 +37,4 @@ function returnOnlyInteger(arr) {
 
 }
 
-console.log(returnOnlyInteger([10, "121", 56, 20, "car", 3, "lion"]));
+console.log(returnOnlyInteger([10, "121", 56, 20, "car", 3, "lion"]));console.log(returnOnlyInteger([10, "121", 56, 20, "car", 3, "lion"]));
