@@ -12,39 +12,35 @@
 
 // textToNumberBinary("one one") ➞ ""
 
-function textToNumberBinary(str) {
+function textToNumberBinary(numbers) {
+  const obj = {
+    zero: 0,
+    one: 1,
+  };
   let result = "";
-  let splitVal = str.split(" ");
-  const arr = ["zero", "one"];
+  const arrOfStringValues = numbers.split(" ");
 
-  for (let i = 0; i < splitVal.length; i++) {
-    if (arr.includes(splitVal[i])) {
-      if (splitVal[i] === "zero") {
-        result += 0;
-      } else {
-        result += 1;
-      }
+  for (const el of arrOfStringValues) {
+    if (!Object.keys(obj).includes(el.toLowerCase())) {
+      return "oops invalid arguments";
     } else {
-      return " ";
+      result += obj[el.toLowerCase()];
     }
   }
-  return !result.includes(0) || !result.includes(1) ? "" : result;
 
-  //   let data = splitVal
-  //     .map((val) => {
-  //       if (arr.includes(val)) {
-  //         if (val === "zero") {
-  //           return 0;
-  //         } else return 1;
-  //       } else {
-  //         return "in valid string";
-  //       }
-  //     })
-  //     .join("");
+  //   for (let i = 0; i < arrOfStringValues.length; i++) {
+  //     if (arrOfStringValues[i] === "zero" && arrOfStringValues[i + 1] !== "one") {
+  //       return "";
+  //     } else if (
+  //       arrOfStringValues[i] === "zero" ||
+  //       arrOfStringValues[i] === "one"
+  //     ) {
+  //       result += arrOfStringValues[i];
+  //     }
+  //   }
 
-  //   return data.includes("in valid string") ||    !data.includes(1)    !data.includes(0) ||     ? ""
-  //     : data;
+  return result;
 }
+
+console.log(textToNumberBinary("Zero one zero ONE zero one zero one"));
 console.log(textToNumberBinary("zero one zero one zero one zero three"));
-console.log(textToNumberBinary("zero one zero one zero one zero one"));
-console.log(textToNumberBinary("one one"));
