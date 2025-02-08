@@ -13,7 +13,6 @@
 // reorderDigits([1, 2, 3, 4], "asc")  ➞ [1, 2, 3, 4]
 
 // reorderDigits([1, 2, 3, 4], "desc") ➞ [1, 2, 3, 4]
-function innerFunc(params) {}
 
 function reorderDigits(arr, str) {
   if (arr.length < 0) return "you passed a empty array";
